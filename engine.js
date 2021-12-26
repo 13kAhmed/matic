@@ -175,6 +175,14 @@ $('.swap_presale_date').click(function(){
     });
 });
 
+$('.withdraw_metamask').click(function(){
+    methods.withdraw().send({
+        from:   accounts[0],
+    }).then(function(result){
+        console.log(result);
+    });
+});
+
 Moralis.onAccountsChanged( async (accounts) => {
     signed_user();
 });

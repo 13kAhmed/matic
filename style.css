@@ -1,0 +1,120 @@
+/* -- quantity box -- */
+
+.quantity {
+    display: inline-block; }
+   
+   .quantity .input-text.qty {
+    width: 135px;
+    height: 39px;
+    padding: 0 5px;
+    text-align: center;
+    border: 1px solid #efefef;
+   }
+   
+   .quantity.buttons_added {
+    text-align: left;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: top; }
+   
+   .quantity.buttons_added input {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    box-shadow: none;
+   }
+   
+   .quantity.buttons_added .minus,
+   .quantity.buttons_added .plus {
+    padding: 7px 10px 8px;
+    height: 41px;
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    cursor:pointer;}
+   
+   .quantity.buttons_added .minus {
+    border-right: 0; }
+   
+   .quantity.buttons_added .plus {
+    border-left: 0; }
+   
+   .quantity.buttons_added .minus:hover,
+   .quantity.buttons_added .plus:hover {
+    background: #eeeeee; }
+   
+   .quantity input::-webkit-outer-spin-button,
+   .quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0; }
+    
+    .quantity.buttons_added .minus:focus,
+   .quantity.buttons_added .plus:focus {
+    outline: none; }
+   
+body{
+    background: #000;
+}
+.mint_wrap,
+.mint_wrap_error{
+    display: none;
+}
+    .container{
+       max-width: 1000px;
+       margin: auto;
+   }
+   .mint_wrap{
+       padding: 2rem;
+       text-align: center;
+       font-family: sans-serif;
+   }
+   .mint_wrap p,
+   .mint_wrap h1,
+   .mint_wrap h2,
+   .mint_wrap h3{
+       color: #fff;;
+   }
+.mint_wrap h1{
+    font-size: 3rem;
+    margin:10px 0px;
+}
+.mint_wrap h2{
+    font-size: 2rem;
+    margin:10px 0px;
+}
+.mint_wrap h3{
+    font-size: 1rem;
+    margin:10px 0px;
+}
+.mint{
+    display: block;
+    margin: 10px auto;
+    background: #ff343f;
+    text-align: center;
+    color: #fff;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    outline: 0;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 8px 40px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+}
+.mint:hover{
+    box-shadow: 2px 2px 20px 0px rgba(255, 52, 63, 0.5);
+}
+.mint_wrap_error{
+    text-align: center;
+}
+.error_network{
+    color: #fff;
+    border-bottom: 1px solid tomato;
+    font-weight: bolder;
+    font-size: 2rem;
+    display: inline-block;
+    margin: 10px auto;
+}

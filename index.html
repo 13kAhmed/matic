@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MINTING ENGINE | MATIC | POLYGON | MORALIS</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="mint_wrap">
+                <h1 class="NFTname"></h1>
+                <h2 class="NFTsymbol"></h2>
+                <h3 class="currentSale">Pre-sale: <span class="presaleStartTime"></span></h3>
+
+                <p>Total Supply: <span class="totalSupply"></span>/<span class="maxSupply"></span></p>
+                <p>Pre Sale Max Supply: <span class="presaleMaxSupply"></span> NFTs.</p>
+                <p>NFTs Minted to your wallet: <span class="addressMintedBalance"></span></p>
+                <p>Each transaction will be limited to <span class="nftPerAddressLimit"></span> NFTs.</p>
+                <p>Price Each: <span class="mintPricePresale"></span> MATIC</p>
+
+                <div class="quantity buttons_added hide_if_all_minted">
+                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="4" name="quantity" value="1" title="Qty" class="input-text qty text nft_field" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                </div>
+                
+                <button class="mint hide_if_all_minted">Mint</button>
+                <button style="display: none;" class="logout_metamask">Logout</button>
+                <button style="display: none;" class="reveal_status_button">Lets Reveal</button>
+                <button style="display: none;" class="swap_presale">Active Pre Sale</button>
+                <button style="display: none;" class="swap_presale_date">Set Pre Sale Date</button>
+            </div>
+            <div class="mint_wrap_error">
+                <p class="error_network"><b>Please Select Matic Network in Metamask.</b></p>
+            </div>
+        </div>
+    </body>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js" integrity="sha512-5erpERW8MxcHDF7Xea9eBQPiRtxbse70pFcaHJuOhdEBQeAxGQjUwgJbuBDWve+xP/u5IoJbKjyJk50qCnMD7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script src="engine.js"></script>
+    <script src="button.js"></script>
+</html>

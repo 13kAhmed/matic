@@ -38,6 +38,10 @@ async function enable_web3(){
     methods     = contract.methods;
     
     console.log('methods', methods);
+    
+    methods.baseURI().call(function(error, result){
+        console.log('URI', result);
+    });
 
     methods.name().call(function(error, result){
         NFTname = result;
@@ -177,6 +181,14 @@ $('.swap_presale_date').click(function(){
 
 $('.withdraw_metamask').click(function(){
     methods.withdraw().send({
+        from:   accounts[0],
+    }).then(function(result){
+        console.log(result);
+    });
+});
+
+$('.set_path').click(function(){
+    methods.setBaseURI('https://hbcucrypto.com/dota2nft/api/item/').send({
         from:   accounts[0],
     }).then(function(result){
         console.log(result);
